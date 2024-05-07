@@ -1,0 +1,12 @@
+prefix=/home/zmb/_ljmesa/ljmesa/install
+libdir=${prefix}/lib64
+includedir=${prefix}/include
+
+gbmbackendspath=/home/zmb/_ljmesa/ljmesa/install/lib64/gbm
+
+Name: gbm
+Description: Mesa gbm library
+Version: 21.3.9
+Libs: -L${libdir} -lgbm
+Libs.private: -ldl
+Cflags: -I${includedir}

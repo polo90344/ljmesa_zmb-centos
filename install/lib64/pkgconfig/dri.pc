@@ -1,0 +1,11 @@
+prefix=/home/zmb/_ljmesa/ljmesa/install
+libdir=${prefix}/lib64
+includedir=${prefix}/include
+
+dridriverdir=/home/zmb/_ljmesa/ljmesa/install/lib64/dri
+
+Name: dri
+Description: Direct Rendering Infrastructure
+Version: 21.3.9
+Requires.private: libdrm >=  2.4.102
+Cflags: -I${includedir}

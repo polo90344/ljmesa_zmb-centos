@@ -1,0 +1,16 @@
+egp_compiler = executable(
+  'egp_compiler',
+  'eGP-01/egp_cmdline.c',
+  include_directories : [inc_mesa, inc_mapi, inc_src, inc_include, inc_gallium, inc_gallium_aux, include_directories('eGP-01')],
+  dependencies : [
+    idep_nir,
+    idep_mesautil
+  ],
+  link_with : [
+    libgallium,
+    libglsl_standalone
+  ],
+  build_by_default : true,
+  install : with_tools.contains('egp_compiler')
+)
+
